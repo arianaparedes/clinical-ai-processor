@@ -6,7 +6,6 @@ import os
 
 # Initialize the OpenAI Client with your secret key
 # REPLÁZALA POR TU NUEVA LLAVE SECRETA REAL ENTRE LAS COMILLAS:
-# Formato universal para servidores en la nube como Render
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Function to generate an Ultra-Premium PDF file with Side-by-Side Corporate Branding
