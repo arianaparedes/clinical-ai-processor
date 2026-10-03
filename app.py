@@ -2,11 +2,12 @@ import streamlit as st
 import datetime
 from openai import OpenAI
 from fpdf import FPDF
-import os
+import os  
 
 # Initialize the OpenAI Client with your secret key
 # REPLÁZALA POR TU NUEVA LLAVE SECRETA REAL ENTRE LAS COMILLAS:
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+# Formato universal para servidores en la nube como Render
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Function to generate an Ultra-Premium PDF file with Side-by-Side Corporate Branding
 def create_pdf(report_text, patient_name, date_str, age, modality, logo_file, signature_file):
